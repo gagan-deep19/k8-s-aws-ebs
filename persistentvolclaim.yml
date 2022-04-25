@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-sc-example
+spec:
+  selector:
+    matchLabels:
+      type: hostpath
+  accessModes:
+    - ReadWriteMany
+  storageClassName: slow
+  resources:
+    requests:
+      storage: 500M
