@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  labels: 
+    app: tomcat
+  name: tomcat-deployment
+spec: 
+  replicas: 3
+  selector: 
+    matchLabels: 
+      app: tomcat
+  template: 
+    metadata: 
+      labels: 
+        app: tomcat
+    spec: 
+      containers: 
+        - image: anilpu3/cicd-build-docker-repo:1.0
+          name: tomcat

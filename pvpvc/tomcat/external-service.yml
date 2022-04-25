@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tomcat-external
+spec:
+  selector:
+    app: tomcat
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8080
+  externalIPs:
+    - 172.31.26.232
