@@ -24,3 +24,5 @@ spec:
         - name: mypvc
           persistentVolumeClaim:
             claimName: pvc-sc-example 
+
+            jj
