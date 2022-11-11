@@ -25,4 +25,4 @@ spec:
           persistentVolumeClaim:
             claimName: pvc-sc-example 
 
-            jj
+            
